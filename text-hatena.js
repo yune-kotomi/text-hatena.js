@@ -90,7 +90,7 @@ Hatena.prototype = {
 			this._html += node.html();
 		}
 		return this._html;
-	}, 
+	},
 
 	html : function(){
 		return this._html;
@@ -200,7 +200,7 @@ Hatena.Context.prototype = {
 // Hatena::Node
 Hatena.Node = function(args){ this.init(args); };
 Hatena.Node.prototype = {
-	_html : "", 
+	_html : "",
 	pattern : "",
 
 	init : function(args){
@@ -273,7 +273,7 @@ Hatena.DlNode = function(args){ this.init(args); };
 Hatena.DlNode.prototype = extend({}, Hatena.Node.prototype, {
 	init : function(args){
 		Hatena.Node.prototype.init.call(this, args);
-		this.pattern = /^\:((?:<[^>]+>|\[\].+?\[\]|\[[^\]]+\]|\[\]|[^\:<\[]+)+)\:(.+)$/;
+		this.pattern = /^\:((?:<[^>]+>|\[\].+?\[\]|\[[^\]]+\]|\[\]|[^\:<\[])+)\:(.+)$/;
 	},
 
 	parse : function(){
